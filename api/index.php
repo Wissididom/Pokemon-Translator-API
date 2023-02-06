@@ -66,6 +66,7 @@ for ($i = 0; $i < count($pokemons); $i++) {
     if ($pokemonFound)
         break;
     if (strtolower($pokemons[$i]['name']) == strtolower($_GET['name'])) {
+        print_r($pokemons[$i]);
         for ($j = 0; $j < count($pokemons); $j++) {
             if ($pokemons[$i]['pokemon_species_id'] == $pokemons[$j]['pokemon_species_id'] && intval($pokemons[$j]['local_language_id']) == $language) {
                 switch ($language) {
