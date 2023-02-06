@@ -61,7 +61,7 @@ switch ($language) {
         $reply = "Your Pokemon couldn't be found!";
         break;
 }
-print_r($pokemons);
+$pokemons = array_values($pokemons);
 for ($i = 0; $i < count($pokemons); $i++) {
     if ($pokemonFound)
         break;
