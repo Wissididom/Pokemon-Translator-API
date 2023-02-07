@@ -1,42 +1,54 @@
 [
    {
-      "name":"\u65e5\u672c\u8a9e",
+      "name":"ja-Hrkt",
       "value":"1"
    },
    {
-      "name":"R\u014dmaji",
+      "name":"roomaji",
       "value":"2"
    },
    {
-      "name":"\ud55c\uad6d\uc5b4",
+      "name":"ko",
       "value":"3"
    },
    {
-      "name":"\u4e2d\u56fd\u4eba",
+      "name":"zh-Hant",
       "value":"4"
    },
    {
-      "name":"Fran\u00e7ais",
+      "name":"fr",
       "value":"5"
    },
    {
-      "name":"Deutsch",
+      "name":"de",
       "value":"6"
    },
    {
-      "name":"Espa\u00f1ol",
+      "name":"es",
       "value":"7"
    },
    {
-      "name":"italiano",
+      "name":"it",
       "value":"8"
    },
    {
-      "name":"English",
+      "name":"en",
       "value":"9"
    },
    {
-      "name":"\u010de\u0161tina",
+      "name":"cs",
       "value":"10"
+   },
+   {
+      "name":"ja",
+      "value":"11"
+   },
+   {
+      "name":"zh-Hans",
+      "value":"12"
+   },
+   {
+      "name":"pt-BR",
+      "value":"13"
    }
 ]
