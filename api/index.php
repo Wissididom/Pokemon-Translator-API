@@ -20,16 +20,16 @@ if ($language > 10 || $language < 1) {
     echo "400 Bad Request - Invalid Language";
     die();
 }
+$outlang = $language;
+if (isset($_GET['outlang'])
+    $outlang = $_GET['outlang'];
 if (!isset($_GET['name'])) {
     http_response_code(400);
     echo "400 Bad Request - No Name Given";
     die();
 }
-$csv = file_get_contents('https://github.com/PokeAPI/pokeapi/raw/master/data/v2/csv/pokemon_species_names.csv');
-$pokemons = csv2json($csv);
-$pokemonFound = false;
 $reply = '';
-switch ($language) {
+switch ($outlang) {
     case 1:
         $reply = "あなたのポケモンは見つかりませんでした!";
         break;
@@ -61,7 +61,9 @@ switch ($language) {
         $reply = "Your Pokemon couldn't be found!";
         break;
 }
-$pokemons = array_values($pokemons);
+$csv = file_get_contents('https://github.com/PokeAPI/pokeapi/raw/master/data/v2/csv/pokemon_species_names.csv');
+$pokemons = array_values(csv2json($csv));
+$pokemonFound = false;
 for ($i = 0; $i < count($pokemons); $i++) {
     if ($pokemonFound)
         break;
@@ -70,7 +72,7 @@ for ($i = 0; $i < count($pokemons); $i++) {
     if (strtolower($pokemons[$i]['name']) == strtolower($_GET['name'])) {
         for ($j = 0; $j < count($pokemons); $j++) {
             if ($pokemons[$i]['pokemon_species_id'] == $pokemons[$j]['pokemon_species_id'] && intval($pokemons[$j]['local_language_id']) == $language) {
-                switch ($language) {
+                switch ($outlang) {
                     case 1:
                         $reply = sprintf("あなたのポケモンの日本語名は \"%s\" です。", $pokemons[$j]['name']);
                         break;
