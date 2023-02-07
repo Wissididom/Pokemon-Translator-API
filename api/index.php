@@ -255,13 +255,13 @@ switch ($outlang) {
         $reply = "Vašeho Pokémona se nepodařilo najít!";
         break;
     case 11: // Japanese Hiragana/Katakana
-        $reply = "Vašeho Pokémona se nepodařilo najít!";
+        $reply = "あなたのポケモンは見つかりませんでした!";
         break;
     case 12: // Chinese (simplified)
-        $reply = "Vašeho Pokémona se nepodařilo najít!";
+        $reply = "找不到你的宝可梦！";
         break;
     case 13: // (Brazilian) Portuguese
-        $reply = "Vašeho Pokémona se nepodařilo najít!";
+        $reply = "Seu Pokémon não foi encontrado!";
         break;
     default: // 9 // English
         $reply = "Your Pokemon couldn't be found!";
