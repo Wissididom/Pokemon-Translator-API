@@ -279,6 +279,7 @@ for ($i = 0; $i < count($pokemons); $i++) {
         for ($j = 0; $j < count($pokemons); $j++) {
             if ($pokemons[$i]['pokemon_species_id'] == $pokemons[$j]['pokemon_species_id'] && intval($pokemons[$j]['local_language_id']) == $language) {
                 $reply = sprintf($nameFoundPatterns[$language][$outlang], $pokemons[$j]['name']);
+                $pokemonFound = true;
             }
         }
     }
