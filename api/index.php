@@ -21,7 +21,7 @@ if ($language > 10 || $language < 1) {
     die();
 }
 $outlang = $language;
-if (isset($_GET['outlang'])
+if (isset($_GET['outlang']))
     $outlang = $_GET['outlang'];
 if (!isset($_GET['name'])) {
     http_response_code(400);
